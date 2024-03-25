@@ -42,6 +42,8 @@ project/
 │   ├── scripts/              # Скрипты
 │   └── utils/                # Утилиты для разработки фронтенд-кода вне среды Visiology Designer
 │
+├── tests/
+│
 ├── public/                   # Публичные ресурсы
 │   ├── images/               # Изображения
 │   ├── fonts/                # Шрифты
