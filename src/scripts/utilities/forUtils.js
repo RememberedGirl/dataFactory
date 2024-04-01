@@ -1,17 +1,21 @@
 // Функция для генерации HTML-кода сетки из водопадов
-const {generateWaterfallChart} = require("../../components/highcharts");
 
-function generateGridOfWaterfalls(dataArray) {
-    let gridHtml = '<div class="grid-container">';
-    dataArray.forEach(data => {
-        gridHtml += generateWaterfallChart(data);
+
+import {generateWaterfallChart} from "../../components/highcharts.js";
+
+export function generateGridOfWaterfalls(dataArray, divName) {
+
+    let gridHtml = `<div class=${divName}>`;
+    dataArray.forEach( (data, i ) => {
+        //gridHtml += generateWaterfallChart(data, divName+i);
+        console.log('generateWaterfallChart:', generateWaterfallChart(data, i))
     });
     gridHtml += '</div>';
     return gridHtml;
 }
 
 // Функция для добавления HTML-кода в указанный элемент
-function appendHtmlToElement(html, elementId) {
+export function appendHtmlToElement(html, elementId) {
     const element = document.getElementById(elementId);
     if (element) {
         element.innerHTML += html;
@@ -20,7 +24,7 @@ function appendHtmlToElement(html, elementId) {
     }
 }
 
-module.exports = {
-    generateGridOfWaterfalls,
-    appendHtmlToElement
-}
+// module.exports = {
+//     generateGridOfWaterfalls,
+//     appendHtmlToElement
+// }

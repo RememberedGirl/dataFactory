@@ -1,13 +1,14 @@
-function generateWaterfallChart(data) {
+export function generateWaterfallChart(data, divId) {
     // Создание блока для графика
     let chartBlock = document.createElement('div');
-    chartBlock.id = 'waterfall-chart-container';
+    chartBlock.id = divId;
 
     // Создание конфигурации для графика
     let chartConfig = {
         chart: {
-            type: 'waterfall',
-            renderTo: 'waterfall-chart-container'
+            type: 'bar',
+            // type: 'waterfall',
+            renderTo: divId
         },
         title: {
             text: 'Waterfall Chart'
@@ -27,9 +28,7 @@ function generateWaterfallChart(data) {
             pointFormat: '<b>{point.y:,.2f}</b>'
 
         },
-        series: [{
-            data: data
-        }]
+        series: [data]
     };
 
     // Создание графика Highcharts Waterfall
@@ -41,6 +40,6 @@ function generateWaterfallChart(data) {
     return chartHTML;
 }
 
-module.exports = {
-    generateWaterfallChart
-}
+// module.exports = {
+//     generateWaterfallChart
+// }

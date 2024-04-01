@@ -1,23 +1,25 @@
 
+
 // Ваши данные для графиков водопадов
-import {appendHtmlToElement, generateGridOfWaterfalls} from "../../src/scripts/utilities/forUtils";
+import {appendHtmlToElement, generateGridOfWaterfalls} from "../../src/scripts/utilities/forUtils.js";
 
 const dataArray = [
     {
-        categories: ['Категория 1', 'Категория 2', 'Категория 3', 'Категория 4'],
-        values: [100, -20, 80, -50]
-    },
-    {
-        categories: ['A', 'B', 'C', 'D', 'E'],
-        values: [200, -100, 150, -50, 120]
-    },
-    {
-        categories: ['Группа 1', 'Группа 2', 'Группа 3'],
-        values: [300, -200, 100]
+        name: 'Year 1990',
+        data: [631, 727, 3202, 721]
+    }, {
+        name: 'Year 2000',
+        data: [814, 841, 3714, 726]
+    }, {
+        name: 'Year 2018',
+        data: [1276, 1007, 4561, 746]
     }
 ];
-// Генерируем HTML-код сетки из водопадов
-const gridHtml = generateGridOfWaterfalls(dataArray);
+// // Генерируем HTML-код сетки из водопадов
+
+const gridHtml = generateGridOfWaterfalls(dataArray,"grid-container");
+console.log('gridHtml',gridHtml)
+
 
 // Добавляем HTML-код в указанный элемент
-appendHtmlToElement(gridHtml, 'widget-123');
+// appendHtmlToElement(gridHtml, 'widget-123');
