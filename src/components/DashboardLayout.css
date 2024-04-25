@@ -1,0 +1,48 @@
+body {
+    font-family: MoscowSans-Regular;
+}
+
+h1 {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 40px;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 24px;
+}
+p {
+    font-size: 16px;
+    color: #9CA2A9;
+}
+
+
+.osnovaku {
+    margin: 10px;
+
+}
+.widget {
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+    background: #0000;
+    box-shadow: 3px 3px 5px #F2F2F2;
+    border-radius: 15px;
+
+
+}
+
+
+.image {
+    padding: 0 15px;
+    object-fit: contain;
+    max-height: 51px;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Animation</title>
+    <style>
+        .loader {
+            width: fit-content;
+            font-size: 17px;
+            font-family: monospace;
+            line-height: 1.4;
+            font-weight: bold;
+            background-size: calc(1ch + 1px) 100%;
+            border-bottom: 10px solid #0000;
+            position: relative;
+            clip-path: inset(-20px 0);
+        }
+        .loader::before {
+            content:"Loading";
+        }
+        .loader::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 14px;
+            background: #25adda;
+            left: -10px;
+            bottom: 100%;
+            animation: l8-1 3s infinite linear;
+        }
+
+        @keyframes l8-1{
+            100% {left:115%}
+        }
+    </style>
+</head>
+<body>
+<div class="loader"></div>
+
+
+</body>
+</html>

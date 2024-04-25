@@ -1,0 +1,154 @@
+{
+  "general": {
+    "renderTo": "173848da098a48f7a14051220289ac62",
+    "type": "CustomWidget"
+  },
+  "colors": [
+    "rgba(180, 61, 199, 1)",
+    "rgba(244, 108, 156, 1)",
+    "rgba(239, 156, 31, 1)",
+    "rgba(237, 190, 48, 1)",
+    "rgba(188, 207, 49, 1)",
+    "rgba(133, 187, 68, 1)",
+    "rgba(59, 173, 239, 1)",
+    "rgba(112, 58, 238, 1)",
+    "rgba(234, 67, 102, 1)",
+    "rgba(246, 126, 109, 1)"
+  ],
+  "data": {
+    "cols": [
+      [
+        "num",
+        "Все типы"
+      ],
+      [
+        "completed_vehicle_percent",
+        "Рабочий"
+      ],
+      [
+        "trip_cnt",
+        "Рабочий"
+      ],
+      [
+        "Выполнение выпуска"
+      ]
+    ],
+    "rows": [
+      [
+        "2023-02-28",
+        "2"
+      ],
+      [
+        "2023-03-01",
+        "3"
+      ],
+      [
+        "2023-03-02",
+        "3"
+      ]
+    ],
+    "values": [
+      [
+        61.68,
+        61.5,
+        61.68
+      ],
+      [
+        102.8,
+        102.5,
+        102.8
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "colsMeta": [
+      {
+        "measureGroupId": [
+          "UK_NGPT_vipolnenie_den"
+        ],
+        "measureId": [],
+        "dimensions": [
+          "Все типы"
+        ]
+      },
+      {
+        "measureGroupId": [
+          "UK_NGPT_vipolnenie_den"
+        ],
+        "measureId": [
+          "completed_vehicle_percent"
+        ],
+        "dimensions": [
+          "Рабочий"
+        ]
+      },
+      {
+        "measureGroupId": [
+          "UK_NGPT_vipolnenie_den"
+        ],
+        "measureId": [
+          "trip_cnt"
+        ],
+        "dimensions": [
+          "Рабочий"
+        ]
+      },
+      null
+    ],
+    "colsInfo": [
+      {
+        "id": "\"UK_NGPT_vipolnenie_den\",\"num\",\"Все типы\"",
+        "idParts": [
+          "UK_NGPT_vipolnenie_den",
+          "num",
+          "Все типы"
+        ]
+      },
+      {
+        "id": "\"UK_NGPT_vipolnenie_den\",\"completed_vehicle_percent\",\"Рабочий\"",
+        "idParts": [
+          "UK_NGPT_vipolnenie_den",
+          "completed_vehicle_percent",
+          "Рабочий"
+        ]
+      },
+      {
+        "id": "\"UK_NGPT_vipolnenie_den\",\"trip_cnt\",\"Рабочий\"",
+        "idParts": [
+          "UK_NGPT_vipolnenie_den",
+          "trip_cnt",
+          "Рабочий"
+        ]
+      },
+      {
+        "id": "\"Выполнение выпуска\"",
+        "idParts": [
+          "Выполнение выпуска"
+        ]
+      }
+    ],
+    "totals": [],
+    "colsDataType": [
+      "real",
+      "real",
+      "long",
+      null
+    ],
+    "colHeaders": [
+      "Рабочий(нерабочий)",
+      "operator_nm"
+    ],
+    "rowHeaders": [
+      "Дата",
+      "Номер месяца"
+    ]
+  }
+}

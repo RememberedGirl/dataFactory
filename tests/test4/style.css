@@ -1,0 +1,85 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.va-widget-body{
+    width: 1920px;
+    max-width: 1920px;
+    height: 1390px;
+    max-height: 1390px;
+
+}
+.osnovaku {
+    margin: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background: #282828;
+    border-radius: 20px;
+    font-family: Calibri;
+    color: #F5F5F5;
+}
+.gr {
+    color: #868686;
+}
+.header {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bolder;
+        color: #868686;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.column {
+    flex: 1;
+    width: 50%;
+    padding: 10px;
+}
+
+.item1 {
+    padding: 10px;
+    font-size: 28px;
+}
+
+.item{
+    padding: 10px;
+}
+.dif{
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.positive {
+    background-color: #588c58;
+    color: white;
+}
+
+.negative {
+    background-color: #a95656;
+    color: white;
+}
+
+
+.arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.up {
+    border-bottom: 5px solid white;
+}
+
+.down {
+    border-top: 5px solid white;
+}
+

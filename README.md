@@ -18,6 +18,10 @@
 
 - HTML/CSS
 - JavaScript
+- Knockout.js
+- Webpack
+- AngularJS
+- Express.js
 - Highcharts
 - jQuery
 - DevExpress

@@ -1,17 +1,13 @@
-// Функция для генерации HTML-кода сетки из водопадов
+import {generateDataHTML} from "../../components/productCards.js";
 
 
-import {generateWaterfallChart} from "../../components/highcharts.js";
+export function arrrayDiv(str,n, divName) {
 
-export function generateGridOfWaterfalls(dataArray, divName) {
 
-    let gridHtml = `<div class=${divName}>`;
-    dataArray.forEach( (data, i ) => {
-        //gridHtml += generateWaterfallChart(data, divName+i);
-        console.log('generateWaterfallChart:', generateWaterfallChart(data, i))
-    });
-    gridHtml += '</div>';
-    return gridHtml;
+    const dataArray = Array.from({ length: n },
+        (_,i) => `<div id="${str + i}" style="background: #C2B160FF"> _ </div>`)
+
+    document.querySelector(divName).innerHTML = dataArray.join(' ')
 }
 
 // Функция для добавления HTML-кода в указанный элемент
