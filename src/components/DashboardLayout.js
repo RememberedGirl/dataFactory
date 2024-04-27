@@ -1,7 +1,3 @@
-
-/**
- * Класс SeederElement предоставляет методы для управления элементами и стилями в DOM.
- */
 class SeederElement {
     constructor(wGeneralRenderTo) {
         this.wGeneralRenderTo = wGeneralRenderTo;
@@ -28,6 +24,7 @@ class SeederElement {
         }
         div.style.cssText = styleString;
     }
+
     /**
      * Добавляет стиль в DOM.
      * @param {string} styleString Строка, содержащая CSS-стили для добавления в DOM.
@@ -134,7 +131,14 @@ class SeederElement {
                  style=" 
                     grid-row: span ${rows}; grid-column: span ${columns};
                  ">
-                    загрузка...
+                    <div class="va-widget"  id="widget-${id}" >
+                       <div class="va-widget-body-container">
+                            <div class="va-widget-body" id="${id}">
+                                загрузка...
+                            </div>
+                        </div>
+                    </div>
+                    
                  </div>`;
         });
         return html; // Возвращаем сгенерированный HTML
@@ -147,7 +151,7 @@ class SeederElement {
      * @param {number} w - Количество столбцов (по умолчанию 1920).
      * @param {number} h - Количество строк (по умолчанию 1080).
      */
-    addTilesToWidget(tileArray, styleStringSubsidiary , w = 1920, h = 1080) {
+    addTilesToWidget(tileArray, styleStringSubsidiary, w = 1920, h = 1080) {
         const styleString = this.generateGridStyle(w, h);
         const elementHTML = this.generateDancingTiles(tileArray);
 
@@ -160,9 +164,82 @@ class SeederElement {
 
 }
 
-
-
 const tilesArray = [
-    ["blok-1", "osnovaku widget", 13, 192],
-    ["blok0", "osnovaku", 6, 142]
+    //["id", "список классов", w, h],
+    ["виджет1", "osnovaku", 46, 10],
+    ["виджет2", "osnovaku", 46, 10],
+    ["виджет3", "osnovaku", 46, 10],
+    ["виджет4", "osnovaku", 46, 10],
+    ["заголовок1", "osnovaku widget", 46, 50],
+    ["заголовок2", "osnovaku widget", 46, 50],
+    ["заголовок3", "osnovaku widget", 46, 50],
+    ["заголовок4", "osnovaku widget", 46, 50],
+
+    ["виджет5", "osnovaku", 192, 10],
+    ["заголовок5", "osnovaku widget",192, 300],
+
+
 ]
+
+let css, cssGlobal, cssGlobalId = 'НГПТ'
+{
+    cssGlobal = ` 
+
+body {
+    font-family: MoscowSans-Regular !important;
+    color: #fff; 
+}
+`
+    css =
+        `
+h1 {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 40px;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 24px;
+}
+p {
+    font-size: 16px;
+    color: #9CA2A9;
+}
+
+
+.osnovaku {
+    background-color: #333;
+    margin: 10px;
+
+}
+.widget {
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+    background: #aaa;
+    box-shadow: 3px 3px 5px #F2F2F2;
+    border-radius: 15px;
+
+
+}
+
+
+.image {
+    padding: 0 15px;
+    object-fit: contain;
+    max-height: 51px;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+
+}
+`
+}
+
+const layout = new SeederElement(w.general.renderTo)
+layout.addTilesToWidget(tilesArray, css)
+layout.addStyleToDOM(cssGlobal, cssGlobalId)
